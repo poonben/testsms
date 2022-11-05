@@ -5,7 +5,7 @@ use PhpAmqpLib\Connection\AMQPStreamConnection;
 use PhpAmqpLib\Connection\AMQPSSLConnection;
 use PhpAmqpLib\Message\AMQPMessage;
 
-$url_str = getenv('CLOUDAMQP_URL')
+$url_str = getenv('amqps://oxuafuqv:c5cimlgFtytgeQgTvEUOLfnTDUsG_uBF@cougar.rmq.cloudamqp.com/oxuafuqv')
   or exit("CLOUDAMQP_URL not set");
 $url = parse_url($url_str);
 $vhost = ($url['path'] == '/' || !isset($url['path'])) ? '/' : substr($url['path'], 1);
